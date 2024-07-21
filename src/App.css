@@ -1,0 +1,258 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(34, 33, 33);
+}
+
+.box {
+  width: 600px;
+  height: fit-content;
+  box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.637);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.wordleBody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.wordlePuzzle {
+  width: 80%;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.wordleRow {
+  width: 90%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.wordleGuess {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(34, 33, 33);
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  transition: all 0.5s ease-in-out;
+}
+
+.wordleInput {
+  width: 470px;
+  height: 80px;
+  position: absolute;
+  opacity: 0;
+}
+
+.wordleSubmit{
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(34, 33, 33);
+  border: 1px solid white;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.W {
+  background-color: rgb(102, 100, 100);
+}
+
+.CW {
+  background-color: rgb(224, 224, 85);
+}
+
+.CR {
+  background-color: rgb(79, 211, 79);
+}
+
+.flashRed {
+  animation: flashRedAnimation 1s;
+}
+
+.flip {
+  animation: flipAnimation 1s;
+}
+
+@keyframes flipAnimation {
+  0% {
+    transform: rotateX(0deg); /* Rotate around the Y-axis by 0 degrees */
+  }
+  100% {
+    transform: rotateX(180deg); /* Rotate around the Y-axis by 180 degrees */
+  }
+}
+
+@keyframes flashRedAnimation {
+  0% {
+    background-color: rgba(236, 66, 66, 0);
+  }
+  50% {
+    background-color: rgb(236, 66, 66);
+  }
+  100% {
+    background-color: rgba(236, 66, 66, 0);
+  }
+}
+
+.inputFlash {
+  animation: inputFlash 0.2s;
+}
+
+@keyframes inputFlash {
+  0% {
+    transform: scale(1); /* normal size */
+  }
+  50% {
+    transform: scale(1.1); /* bigger size */
+  }
+  100% {
+    transform: scale(1); /* back to normal size */
+  }
+}
+
+.tryAgain {
+  color: white;
+  font-size: 25px;
+}
+
+.correctWord {
+  text-decoration:underline;
+  color: rgb(149, 221, 115);
+}
+
+.keyboardBody {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+
+.keyboardRow {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.keys {
+  width: 45px;
+  height: 60px;
+  background-color: rgb(120, 120, 122);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 7px;
+}
+
+.unavaliable {
+  opacity: 0.2;
+}
+
+.correct {
+  background-color: rgb(118, 231, 118);
+}
+.specialKeys {
+  width: 90px;
+}
+
+
+.startScreen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: rgb(34, 33, 33);
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.WordleText {
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.wordleTextBox {
+  width: 70px;
+  height: 70px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+}
+
+.startWordleButton {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(105, 218, 105);
+  color: white;
+  margin-top: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.checkLabel {
+  float: right;
+}
+
+.checkBoxContainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+.Resets {
+  color: white;
+  position: absolute;
+  left: 60px;
+  bottom: 10px;
+}
